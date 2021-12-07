@@ -28,6 +28,8 @@ public class Driver {
 
     static int partition(int forwardMovingPointer, int backwardMovingPointer) {
         int pivot = (forwardMovingPointer+backwardMovingPointer)/2;
+                // int pivot = forwardMovingPointer; --> GIVES INDEX OUT OF BOUND ERROR FOR AN ARRAY IN DESCENDING ORDER 
+
         while (forwardMovingPointer < backwardMovingPointer) {
             while (nosToSort.get(forwardMovingPointer) <= nosToSort.get(pivot)) {
                 forwardMovingPointer++;
