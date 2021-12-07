@@ -27,7 +27,7 @@ public class Driver {
     }
 
     static int partition(int forwardMovingPointer, int backwardMovingPointer) {
-        int pivot = forwardMovingPointer;
+        int pivot = (forwardMovingPointer+backwardMovingPointer)/2;
         while (forwardMovingPointer < backwardMovingPointer) {
             while (nosToSort.get(forwardMovingPointer) <= nosToSort.get(pivot)) {
                 forwardMovingPointer++;
